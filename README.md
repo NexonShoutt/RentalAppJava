@@ -61,8 +61,3 @@ Transaksi sewa berhasil.
 3. Gunakan input terminal untuk navigasi dan memasukkan data.
 
 ---
-
-## 🛠️ Kebutuhan Pengembangan Selanjutnya
-* Menyimpan data kendaraan & transaksi ke file.
-* Antarmuka pengguna berbasis GUI (misalnya Java Swing/JavaFX).
-* Fitur pengembalian kendaraan dan perhitungan total biaya.

@@ -46,7 +46,7 @@ Rental Kendaraan adalah program Java berbasis konsol yang dirancang untuk mengel
 
 ---
 
-## 🧪 Contoh Penggunaan
+## 🖥️ Contoh Penggunaan
 ```
 Jenis (1: Mobil, 2: Motor): 1
 Plat Nomor: B 1234 CD
@@ -62,7 +62,7 @@ Tanggal Kembali (yyyy-mm-dd): 2025-05-16
 Transaksi sewa berhasil.
 ```
 
-## 🏃 Cara Menjalankan
+## 💡 Cara Menjalankan
 1. Pastikan semua class Java telah dikompilasi (`javac`).
 2. Buat dan jalankan class `Main` untuk mengatur menu.
 3. Gunakan input terminal untuk navigasi dan memasukkan data.

@@ -1,6 +1,13 @@
 # 🚗 Program Rental Kendaraan
 
-Program ini merupakan aplikasi berbasis Java untuk mengelola **penyewaan kendaraan**, mencakup kendaraan roda dua (motor) dan roda empat (mobil). Aplikasi ini mendukung fitur **pendaftaran kendaraan**, **penyewaan dengan validasi tanggal**, dan **pelacakan transaksi penyewaan**.
+Rental Kendaraan adalah program Java berbasis konsol yang dirancang untuk mengelola penyewaan kendaraan, seperti mobil dan motor. Program ini memungkinkan petugas rental untuk:
+
+1. Menambahkan kendaraan baru ke dalam sistem.
+2. Menyewakan kendaraan kepada pelanggan dengan validasi tanggal dan ketersediaan.
+3. Melihat semua kendaraan yang tersedia atau sedang disewa.
+4. Menampilkan riwayat transaksi penyewaan secara lengkap.
+5. Program ini dibangun menggunakan paradigma Pemrograman Berorientasi Objek (OOP) dan memanfaatkan fitur abstract class, inheritance, interface, dan validasi input.
+6. Struktur program dibuat modular dengan pembagian class yang rapi dalam package moduls dan utils.
 
 ---
 

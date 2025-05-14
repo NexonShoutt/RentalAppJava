@@ -1,13 +1,6 @@
 import java.util.Scanner;
-import java.time.LocalDate;
-import utils.MenuAction;
-import utils.InputValidator;
-import moduls.RentalManager;
-import moduls.RentalTransaction;
-import moduls.Vehicle;
-import moduls.VehicleManager;
-import moduls.Car;
-import moduls.Motorcycle;
+import moduls.*;
+import utils.*;
 
 public class MainApp {
     public static void main(String[] args) {
@@ -24,71 +17,40 @@ public class MainApp {
             System.out.println("4. Lihat Transaksi");
             System.out.println("5. Keluar");
             System.out.print("Pilih menu: ");
-            int pilihan = scanner.nextInt();
-            scanner.nextLine(); // clear buffer
+
+            int pilihan = -1;
+
+            // Memasukkan pilihan menu dengan pengecekan input yang aman
+            try {
+                pilihan = Integer.parseInt(scanner.nextLine()); // Menggunakan nextLine() dan parse
+            } catch (NumberFormatException e) {
+                System.out.println("Input harus berupa angka. Silakan coba lagi.");
+            }
+
+            MenuAction action = null;
 
             switch (pilihan) {
                 case 1:
-                    System.out.print("Jenis (1: Mobil, 2: Motor): ");
-                    int jenis = scanner.nextInt();
-                    scanner.nextLine();
-                    System.out.print("Plat Nomor: ");
-                    String plat = scanner.nextLine();
-                    if (!InputValidator.validasiPlat(plat))
-                        break;
-
-                    System.out.print("Merk: ");
-                    String merk = scanner.nextLine();
-                    System.out.print("Tahun: ");
-                    int tahun = scanner.nextInt();
-                    scanner.nextLine();
-
-                    Vehicle kendaraan = (jenis == 1)
-                            ? new Car(plat, merk, tahun)
-                            : new Motorcycle(plat, merk, tahun);
-
-                    vehicleManager.tambahKendaraan(kendaraan);
+                    action = new TambahKendaraanAction(vehicleManager, scanner);
                     break;
-
                 case 2:
-                    vehicleManager.tampilkanKendaraan();
+                    action = new TampilkanKendaraanAction(vehicleManager);
                     break;
-
                 case 3:
-                    System.out.print("Nama Penyewa: ");
-                    String nama = scanner.nextLine();
-                    System.out.print("Plat Nomor Kendaraan: ");
-                    String platSewa = scanner.nextLine();
-
-                    Vehicle v = vehicleManager.cariKendaraan(platSewa);
-                    if (v == null) {
-                        System.out.println("Kendaraan tidak ditemukan.");
-                        break;
-                    }
-
-                    System.out.print("Tanggal Sewa (yyyy-mm-dd): ");
-                    LocalDate tglSewa = InputValidator.validasiTanggal(scanner.nextLine());
-                    if (tglSewa == null)
-                        break;
-
-                    System.out.print("Tanggal Kembali (yyyy-mm-dd): ");
-                    LocalDate tglKembali = InputValidator.validasiTanggal(scanner.nextLine());
-                    if (tglKembali == null)
-                        break;
-
-                    rentalManager.sewaKendaraan(nama, v, tglSewa, tglKembali);
+                    action = new SewaKendaraanAction(vehicleManager, rentalManager, scanner);
                     break;
-
                 case 4:
-                    rentalManager.tampilkanSemuaTransaksi();
+                    action = new LihatTransaksiAction(rentalManager);
                     break;
-
                 case 5:
                     running = false;
                     break;
-
                 default:
                     System.out.println("Pilihan tidak valid.");
+            }
+
+            if (action != null) {
+                action.execute(); // Panggil aksi sesuai pilihan
             }
         }
 

@@ -69,8 +69,10 @@ Transaksi sewa berhasil.
 
 ---
 
-### Pembagian tugas kelompok
+### 👥 Pembagian tugas kelompok
 1. Muhammad Fadel Aryasatya Makkulau; MainApp, VehicleManager.
 2. Moch Ichwanul Muslimin Mayang; Rental Manager, RentalTransaction.
-3. Nur Atika Binti Ardi; MenuAction,
+3. Nur Atika Binti Ardi; LihatTransaksiAction, SewaKendaraanAction, TambahKendaraanAction, TampilkanKendaraanAction.
 4. Azizah Nurul Izzah; Vehicle(SuperClass), Car(subClass), Motorcycle(subClass).
+
+---

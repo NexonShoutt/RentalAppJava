@@ -27,4 +27,15 @@ public class RentalTransaction {
     public Vehicle getKendaraan() {
         return kendaraan;
     }
+
+    // Getter untuk tanggal sewa
+    public LocalDate getTanggalSewa() {
+        return tanggalSewa;
+    }
+
+    // Getter untuk tanggal kembali
+    public LocalDate getTanggalKembali() {
+        return tanggalKembali;
+    }
+
 }

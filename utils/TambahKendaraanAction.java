@@ -46,8 +46,8 @@ public class TambahKendaraanAction implements MenuAction {
         double tarif = scanner.nextDouble();
         scanner.nextLine();
         
-        Vehicle kendaraan = (jenis == 1);
-                ? new Car(plat, merk, tahun,tahun);
+        Vehicle kendaraan = (jenis == 1)
+                ? new Car(plat, merk, tahun,tahun)
                 : new Motorcycle(plat, merk, tahun, tahun);
 
         vehicleManager.tambahKendaraan(kendaraan);

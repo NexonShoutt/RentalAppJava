@@ -1,7 +1,7 @@
 package moduls;
 
-import java.util.ArrayList;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class RentalManager {
     private ArrayList<RentalTransaction> listTransaksi;
@@ -18,7 +18,15 @@ public class RentalManager {
         }
         RentalTransaction transaksi = new RentalTransaction(nama, kendaraan, tglSewa, tglKembali);
         listTransaksi.add(transaksi);
+        
+        long jumlahHari = java.time.temporal.ChronoUnit.DAYS.between(tglSewa, tglKembali) + 1;
+        double totalBiaya = jumlahHari * kendaraan.getTarifPerHari();
+
         System.out.println("Transaksi sewa berhasil.");
+        System.out.println("Durasi sewa: " + jumlahHari + " hari");
+        System.out.println("Tarif per hari: Rp" + kendaraan.getTarifPerHari());
+        System.out.println("Total biaya sewa: Rp" + totalBiaya);
+
     }
 
     public boolean isKendaraanSudahDisewa(Vehicle kendaraan, LocalDate tglSewa, LocalDate tglKembali) {

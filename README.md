@@ -68,3 +68,9 @@ Transaksi sewa berhasil.
 3. Gunakan input terminal untuk navigasi dan memasukkan data.
 
 ---
+
+### Pembagian tugas kelompok
+1. Muhammad Fadel; MainApp, 
+2. Ichwanul Muslimin; Rental Manager, RentalTransaction
+3. Nur Atika Binti Ardi; MenuAction,
+4. Azizah Nurul Izzah; Vehicle(SuperClass), Car(subClass), Motorcycle(subClass).

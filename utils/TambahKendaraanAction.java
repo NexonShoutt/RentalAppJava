@@ -19,7 +19,6 @@ public class TambahKendaraanAction implements MenuAction {
     public void execute() {
         int jenis = -1;
 
-        // Loop sampai jenis kendaraan valid (1 atau 2)
         while (jenis != 1 && jenis != 2) {
             System.out.print("Jenis (1: Mobil, 2: Motor): ");
             try {
@@ -43,7 +42,10 @@ public class TambahKendaraanAction implements MenuAction {
         System.out.print("Tahun: ");
         int tahun = scanner.nextInt();
         scanner.nextLine();
-
+        System.out.print("Tarif per Hari: ");
+        double tarif = scanner.nextDouble();
+        scanner.nextLine();
+        
         Vehicle kendaraan = (jenis == 1)
                 ? new Car(plat, merk, tahun,tahun)
                 : new Motorcycle(plat, merk, tahun, tahun);

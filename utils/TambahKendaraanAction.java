@@ -47,8 +47,8 @@ public class TambahKendaraanAction implements MenuAction {
         scanner.nextLine();
         
         Vehicle kendaraan = (jenis == 1)
-                ? new Car(plat, merk, tahun,tahun)
-                : new Motorcycle(plat, merk, tahun, tahun);
+                ? new Car(plat, merk, tahun, tarif)
+                : new Motorcycle(plat, merk, tahun, tarif);
 
         vehicleManager.tambahKendaraan(kendaraan);
     }

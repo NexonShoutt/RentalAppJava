@@ -52,13 +52,16 @@ Jenis (1: Mobil, 2: Motor): 1
 Plat Nomor: B 1234 CD
 Merk: Toyota
 Tahun: 2020
-Tarif: 300000
+Tarif per Hari: 300000
 Kendaraan berhasil ditambahkan.
 
 Nama Penyewa: Budi
 Plat Nomor Kendaraan: B 1234 CD
 Tanggal Sewa (yyyy-mm-dd): 2025-05-14
 Tanggal Kembali (yyyy-mm-dd): 2025-05-16
+Durasi sewa: 3 hari
+Tarif per hari: Rp300000.0
+Total biaya sewa: Rp900000.0
 Transaksi sewa berhasil.
 ```
 

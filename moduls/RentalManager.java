@@ -21,12 +21,10 @@ public class RentalManager {
         
         long jumlahHari = java.time.temporal.ChronoUnit.DAYS.between(tglSewa, tglKembali) + 1;
         double totalBiaya = jumlahHari * kendaraan.getTarifPerHari();
-
-        System.out.println("Transaksi sewa berhasil.");
         System.out.println("Durasi sewa: " + jumlahHari + " hari");
         System.out.println("Tarif per hari: Rp" + kendaraan.getTarifPerHari());
         System.out.println("Total biaya sewa: Rp" + totalBiaya);
-
+        System.out.println("Transaksi sewa berhasil.");
     }
 
     public boolean isKendaraanSudahDisewa(Vehicle kendaraan, LocalDate tglSewa, LocalDate tglKembali) {

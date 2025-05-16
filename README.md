@@ -10,6 +10,37 @@ Rental Kendaraan adalah program Java berbasis konsol yang dirancang untuk mengel
 6. Struktur program dibuat modular dengan pembagian class yang rapi dalam package moduls dan utils.
 
 ---
+## 🔎 Implementasi OOP
+### 1. Object & Class
+* Car.java → objek mobil dibuat dari class ini.
+* Motorcycle.java → objek motor dibuat dari class ini.
+* RentalTransaction.java → objek transaksi sewa.
+* VehicleManager.java, RentalManager.java → membuat dan menyimpan daftar objek kendaraan/transaksi.
+
+### 2. Attribute, Behavior & Constructor
+* Vehicle.java → atribut umum: plat, merk, tahun; behavior: tampilkanInfo().
+* Car.java, Motorcycle.java → konstruktor untuk inisialisasi data spesifik.
+* RentalTransaction.java → atribut: penyewa, tanggal sewa/kembali; method: tampilkanDetail().
+
+### 3. Encapsulation
+* Vehicle.java dan turunannya → atribut private + getter() dan setter() bila diperlukan.
+* RentalTransaction.java → akses data transaksi melalui method.
+* VehicleManager.java, RentalManager.java → menyimpan list kendaraan/transaksi secara private.
+
+### 4. Inheritance (Pewarisan)
+* Car.java dan Motorcycle.java → extends Vehicle
+* Vehicle.java sebagai superclass (abstract class).
+
+### 5. Abstract & Interface
+* Vehicle.java → class abstract dengan method abstract tampilkanInfo().
+* MenuAction.java → interface untuk aksi-aksi menu dengan method execute().
+
+### 7. Polymorphism
+* VehicleManager.java → list ArrayList<Vehicle> menyimpan Car dan Motorcycle.
+* RentalManager.java → method menggunakan parameter Vehicle.
+* utils.MenuAction → semua action (TambahKendaraanAction, SewaKendaraanAction, dll) diakses sebagai MenuAction.
+
+---
 
 ## 📦 Fitur Utama
 ### ✅ Manajemen Kendaraan

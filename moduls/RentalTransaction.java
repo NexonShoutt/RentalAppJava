@@ -20,10 +20,14 @@ public class RentalTransaction {
 
     public void displayTransaction() {
         System.out.println("ID: " + id + " | Penyewa: " + namaPenyewa);
+        System.out.print(kendaraan instanceof Car ? "Mobil: " : "Motor: ");
         kendaraan.displayInfo();
         System.out.println("Sewa: " + tanggalSewa + " - Kembali: " + tanggalKembali);
+        long jumlahHari = java.time.temporal.ChronoUnit.DAYS.between(tanggalSewa, tanggalKembali) + 1;
+        double totalBiaya = jumlahHari * kendaraan.getTarifPerHari();
+        System.out.println("Durasi: " + jumlahHari + " hari | Total biaya: Rp " + totalBiaya);
     }
-
+    
     public Vehicle getKendaraan() {
         return kendaraan;
     }
